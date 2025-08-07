@@ -1,0 +1,106 @@
+<header>
+  <h1>박현서</h1>
+  <p>🌱 사람과 기술을 연결하는 미래를 꿈꾸는 고등학생</p>
+</header>
+
+<main>
+  <!-- 기본 소개 -->
+  <section>
+    <h2>소개</h2>
+    <p>
+      안녕하세요! 저는 컴퓨터와 사람 사이의 연결 고리가 되는 기술을 탐구하고
+      있는 고등학교 2학년 박현서입니다. <br /><br />
+      중학교 시절 우연히 HTML을 접한 후로 웹 개발과 프로그래밍에 흥미를 가지게
+      되었고, 현재는 컴퓨터 동아리에서 다양한 프로젝트에 참여하고 있어요.
+      <br /><br />
+      특히, AI를 활용하여 일상 속 문제를 해결하는 것에 큰 관심이 있으며,
+      최근에는 팀원들과 키오스크를 돕는 AI 시스템 'AiDer'의 프로토타입을 직접
+      기획하고 개발했습니다.
+    </p>
+  </section>
+
+  <section>
+    <h2>관심사</h2>
+    <ul>
+      <li>사용자를 위한 인터페이스 디자인(UI/UX)</li>
+      <li>웹 개발 (HTML, CSS, JavaScript)</li>
+      <li>AI와 머신러닝을 활용한 문제 해결</li>
+      <li>사회적 약자를 돕는 기술 개발</li>
+      <li>창의적인 문제 해결과 기술 융합</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>연락처</h2>
+    <p>
+      📧 이메일:
+      <a href="mailto:parkhyunseo911@gmail.com">parkhyunseo911@gmail.com</a
+      ><br />
+      💻 GitHub:
+      <a href="https://github.com/phs372" target="_blank">github.com/phs372</a
+      ><br />
+      📎 solved.ac:
+      <a href="https://solved.ac/profile/phs3672" target="_blank"
+        >solved.ac/profile/phs3672</a
+      >
+    </p>
+  </section>
+
+  <!-- 게시글 목록 -->
+  <section>
+    <h2>게시글</h2>
+    <div id="postsList"></div>
+  </section>
+</main>
+
+<button id="settingsBtn" title="설정">⚙️</button>
+
+<div id="settingsPanel">
+  <label for="fontSizeSelect">글씨 크기</label>
+  <select id="fontSizeSelect" aria-label="글씨 크기 선택">
+    <option value="14px">작게</option>
+    <option value="16px" selected>보통</option>
+    <option value="20px">크게</option>
+    <option value="24px">더 크게</option>
+  </select>
+
+  <label style="margin-top:10px;">
+    <input type="checkbox" id="darkModeToggle" />
+    다크모드
+  </label>
+</div>
+
+<button id="writeBtn" title="새 글 작성">✏️</button>
+
+<div id="editorPanel">
+  <input type="text" id="postTitle" placeholder="제목을 입력하세요" />
+  <textarea id="postContent" placeholder="내용을 입력하세요"></textarea>
+  <input type="file" id="postImage" accept="image/*" />
+  <label>
+    글꼴:
+    <select id="fontSelect">
+      <option value="Arial" selected>Arial</option>
+      <option value="Georgia">Georgia</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Times New Roman">Times New Roman</option>
+    </select>
+  </label>
+  <label>
+    글자색:
+    <input type="color" id="colorPicker" value="#000000" />
+  </label>
+  <div id="editorButtons">
+    <button id="savePostBtn">게시</button>
+    <button id="cancelPostBtn">취소</button>
+  </div>
+</div>
+
+<div id="postDetail">
+  <h2 id="detailTitle"></h2>
+  <img id="detailImage" alt="첨부 이미지" style="display:none;" />
+  <p id="detailContent"></p>
+  <button id="backToListBtn">뒤로 가기</button>
+  <button id="deletePostBtn" style="margin-left:10px; background:#d9534f; border:none; color:#fff; padding:0.6rem 1rem; border-radius:5px; cursor:pointer; transition: background-color 0.3s;">
+  삭제
+</button>
+</div>
